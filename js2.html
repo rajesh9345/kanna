@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <script>
+        function add(){
+            var a=document.getElementById("i1").value;
+            a=parseInt(a);
+            var b=document.getElementById("i2").value;
+            b=parseInt(b);
+            if(isNaN(a)||isNaN(b))
+            alert("please provide valid number");
+            else
+            document.getElementById("p1").innerHTML="added the two elements "+a+" and "+b+" = " +(a+b);
+        }
+        function mul(){
+            var a=document.getElementById("i1").value;
+            a=parseInt(a);
+            var b=document.getElementById("i2").value;
+            b=parseInt(b);
+            if(isNaN(a)||isNaN(b))
+            alert("please provide valid number");
+            else
+            document.getElementById("p1").innerHTML="multiplication the two elements "+a+" and "+b+" = " +(a*b);
+        }
+        function sub(){
+            var a=document.getElementById("i1").value;
+            a=parseInt(a);
+            var b=document.getElementById("i2").value;
+            b=parseInt(b);
+            if(isNaN(a)||isNaN(b))
+            alert("please provide valid number");
+            else
+            document.getElementById("p1").innerHTML="sub the two elements "+a+" and "+b+" = " +(a-b);
+        }
+        function div(){
+            var a=document.getElementById("i1").value;
+            a=parseInt(a);
+            var b=document.getElementById("i2").value;
+            b=parseInt(b);
+            if(isNaN(a)||isNaN(b))
+            alert("please provide valid number");
+            else
+            document.getElementById("p1").innerHTML="division the two elements "+a+" and "+b+" = " +(a/b);
+        }
+       
+        function bb(){
+       window.history.go(-2);
+        }
+    
+    </script>
+</head>
+<body>
+    <input type="text"  placeholder="input " id="i1" ><br>
+    <input type="number"  placeholder="input " id="i2" ><br>
+    <button onclick="add()">addition</button>
+    <button onclick="mul()">multiplication</button>
+    <button onclick="sub()">sub</button>
+    <button onclick="div()">division</button>
+   
+    <p id="p1"></p>
+    <input type="button" value="click" onclick="bb()">
+</body>
+</html>

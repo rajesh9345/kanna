@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       /* function check(){
+            var dig=new RegExp("^[0-9]+$")
+            var r=document.getElementById("i1").value;
+            alert(dig.test(r));
+        }*/
+       /* function check(){
+            var dig=new RegExp("^[a-z]+[0-9]+$")
+            var r=document.getElementById("i1").value;
+            alert(dig.test(r));
+        }*/
+        function check(){
+            var r=document.getElementById("i1").value;
+            var dig=new RegExp("^(\\W)+[0-9]+[A-Z]+[a-z]+$")
+            for(var i=0;i<r;i++)
+            {
+                if(r[i]!=[A-Z])
+                {
+                    
+            alert("please enter one Capital");
+                }
+            }
+            
+        }
+
+    </script>
+</head>
+<body>
+    <input type="text" id="i1" ><br>
+    <input type="button" onclick="check()" value="check">
+</body>
+</html>

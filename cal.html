@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function first(){
+              var tot=(2.5*document.getElementById("a1").value)+(2*document.getElementById("a2").value)+(3.5*document.getElementById("a3").value);
+              var dis=document.getElementsByName("b1");
+              var ccc=0;
+                 for(var i=0;i<dis.length;i++)
+                 {
+                     if(dis[i].checked)
+                     {
+                        ccc=dis[i].value;
+                     }
+                 }
+              
+              ccc=parseInt(ccc);
+              var total=(tot+(10/100*tot))+ccc;
+              document.getElementById("p1").innerHTML=total;
+        }
+    </script>
+</head>
+<body>
+    Pencil @2.5:<input type="number" id="a1"><br>
+    eraser @2:<input type="number" id="a2"><br>
+    sharpner @3.5:<input type="number" id="a3"><br>
+    tax=10%<br>
+    same day 50Rs<input type="radio" id="a4" name="b1" value="50">
+    tomorrow 30Rs<input type="radio" id="a5" name="b1" value="30">
+    standard time 20Rs<input type="radio" id="a6" name="b1" value="20" checked="checked"><br>
+    <input type="button" value="calculate" onclick="first()">
+    <p id="p1"></p>
+</body>
+</html>
